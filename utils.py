@@ -22,6 +22,7 @@ def prompt_fields(model: Type[Any]) -> BaseModel:
         
         elif is_nested_list_of_pydantic_models(field_type):
             nested_model_type = get_args(field_type)[0]
+            print(f"{LINE_DECORATOR} {nested_model_type.__name__}s {LINE_DECORATOR}")
             data[field_name] = []
             while True:
                 add_item = confirm(f"{ADD_NEW_OF_FIELD} {field_name[:-1]}", default=False)

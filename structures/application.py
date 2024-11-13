@@ -13,7 +13,7 @@ class Application(BaseModel):
     containerPort: int
     imageName: str
     imageTag: str
-    serviceType: str 
+    serviceType: str = 'NodePort' 
     secrets: List[Secret] = []
     config: EnvVariables 
     disableProbes: bool = False

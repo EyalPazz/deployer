@@ -4,8 +4,8 @@ from pydantic import BaseModel
 
 class Route(BaseModel):
     enabled: bool
-    host: Optional[str]
-    path: Optional[str] = "/"
+    host: Optional[str] = None
+    path: Optional[str] = None
 
 
 
